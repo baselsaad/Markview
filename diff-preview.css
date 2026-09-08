@@ -1,0 +1,150 @@
+:root {
+  --codex-diff-surface-background: #262626;
+  --codex-diff-control-background: #202020;
+  --codex-diff-inline-code-background: #383838;
+  --codex-diff-code-background: #1b1b1b;
+  --codex-diff-code-header-background: #151515;
+  --codex-diff-foreground: #c5c5c5;
+  --codex-diff-border: #484848;
+  --codex-diff-hover-background: #383838;
+  --codex-diff-shadow: #0005;
+}
+
+body.vscode-light,
+body.vscode-high-contrast-light {
+  --codex-diff-surface-background: var(--vscode-editor-background, #ffffff);
+  --codex-diff-control-background: var(--vscode-editorWidget-background, #f8f8f8);
+  --codex-diff-inline-code-background: var(--vscode-textCodeBlock-background, #e9e9e9);
+  --codex-diff-code-background: var(--vscode-textCodeBlock-background, #f3f3f3);
+  --codex-diff-code-header-background: var(--vscode-editorGroupHeader-tabsBackground, #ececec);
+  --codex-diff-foreground: var(--vscode-editor-foreground, #242424);
+  --codex-diff-border: var(--vscode-panel-border, #c8c8c8);
+  --codex-diff-hover-background: var(--vscode-toolbar-hoverBackground, #e4e4e4);
+  --codex-diff-shadow: var(--vscode-widget-shadow, #0002);
+}
+
+html body #codex-preview-zoom {
+  position: fixed;
+  right: 18px;
+  bottom: 14px;
+  z-index: 1000;
+  display: flex;
+  gap: 2px;
+  padding: 4px;
+  border: 1px solid var(--codex-diff-border);
+  border-radius: 8px;
+  background: var(--codex-diff-control-background);
+  box-shadow: 0 2px 8px var(--codex-diff-shadow);
+}
+html body #codex-preview-zoom button {
+  min-width: 30px;
+  height: 28px;
+  padding: 0 6px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--codex-diff-foreground);
+  font: 13px Arial, sans-serif;
+  cursor: pointer;
+}
+html body #codex-preview-zoom button:hover { background: var(--codex-diff-hover-background); }
+html body #codex-preview-zoom button:focus-visible { outline: 2px solid var(--vscode-focusBorder, #75beff); }
+html body #codex-preview-zoom button:disabled { opacity: 0.4; cursor: default; }
+html body .markdown-body,
+html body .vscode-body,
+html body .markdown-body > .markdown-body {
+  width: auto !important;
+  max-width: none !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  color: var(--codex-diff-foreground) !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 13px !important;
+  line-height: 21px !important;
+}
+html body :is(p,li,ul,ol,table) {
+  color: var(--codex-diff-foreground) !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 13px !important;
+  line-height: 21px !important;
+}
+html {
+  background: var(--vscode-editor-background, #1e1e1e) !important;
+  padding: 6px !important;
+}
+html body, html body.vscode-body, html body.markdown-body {
+  width: auto !important;
+  max-width: none !important;
+  min-height: calc(100vh - 12px);
+  margin: 0 !important;
+  padding: 16px !important;
+  border: 0 !important;
+  border-radius: 12px !important;
+  background: var(--codex-diff-surface-background) !important;
+  color: var(--codex-diff-foreground) !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 13px !important;
+  line-height: 21px !important;
+  --codex-preview-space: 3.25px;
+}
+html body :is(h1,h2,h3,h4,h5,h6) {
+  padding: 0 !important;
+  border: 0 !important;
+  color: var(--codex-diff-foreground) !important;
+  font-family: Arial, sans-serif !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.3px !important;
+}
+html body h1 { font-size: 19.5px !important; line-height: 26px !important; margin: 0 0 13px !important; }
+html body h2 { font-size: 16.25px !important; line-height: 23px !important; margin: 16px 0 4px !important; }
+html body h3 { font-size: 14.625px !important; line-height: 23px !important; margin: 13px 0 4px !important; }
+html body :is(h4,h5,h6) { font-size: 13px !important; line-height: 21px !important; margin: 13px 0 3px !important; }
+html body p { margin: 0 0 4px !important; }
+html body p + p { margin-top: 13px !important; }
+html body :is(ul,ol) { margin: 0 !important; padding-left: 21px !important; }
+html body li { padding-left: 5px !important; margin: 0 !important; line-height: 21px !important; }
+html body li > p { margin: 0 !important; }
+html body :not(pre) > code {
+  padding: 0 5px !important;
+  border-radius: 5px !important;
+  background: var(--codex-diff-inline-code-background) !important;
+  color: var(--codex-diff-foreground) !important;
+  font-family: Consolas, monospace !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+html body pre {
+  margin: 16px 0 !important;
+  padding: 12px 20px !important;
+  border: 0 !important;
+  border-radius: 18px !important;
+  background: var(--codex-diff-code-background) !important;
+  color: var(--codex-diff-foreground) !important;
+  font-family: Consolas, monospace !important;
+  font-size: 13px !important;
+  line-height: 20px !important;
+}
+html body pre code {
+  display: block;
+  padding: 0 !important;
+  background: transparent !important;
+  font: inherit !important;
+  font-weight: 600 !important;
+}
+html body pre:has(> .codex-preview-header) { padding: 0 !important; }
+html body pre:has(> .codex-preview-header) > code { padding: 0 20px 12px !important; overflow-x: auto; }
+html body .codex-preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  margin-bottom: 0;
+  background: var(--codex-diff-code-header-background);
+  color: var(--codex-diff-foreground);
+  font: 600 12px/24px Arial, sans-serif;
+  user-select: none;
+}
+html body :is(table,thead,tbody,tr,th,td) { background: transparent !important; color: inherit !important; }
+html body :is(th,td) { border-left: 0 !important; border-right: 0 !important; }

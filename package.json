@@ -1,0 +1,31 @@
+{
+  "name": "codex-markdown-preview-style",
+  "displayName": "Codex Markdown Preview Style",
+  "description": "A clean, compact, theme-aware style for VS Code's built-in Markdown preview.",
+  "version": "0.0.6",
+  "publisher": "BaselSaad",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/baselsaad/Markview.git"
+  },
+  "homepage": "https://github.com/baselsaad/Markview#readme",
+  "bugs": {
+    "url": "https://github.com/baselsaad/Markview/issues"
+  },
+  "engines": { "vscode": "^1.85.0" },
+  "categories": ["Visualization", "Other"],
+  "keywords": ["markdown", "preview", "theme", "codex", "reading"],
+  "galleryBanner": {
+    "color": "#1e1e1e",
+    "theme": "dark"
+  },
+  "scripts": {
+    "package": "npx --yes @vscode/vsce@3.9.2 package",
+    "publish": "npx --yes @vscode/vsce@3.9.2 publish"
+  },
+  "contributes": {
+    "markdown.previewStyles": ["./style.css", "./diff-preview.css"],
+    "markdown.previewScripts": ["./preview.js"]
+  }
+}
