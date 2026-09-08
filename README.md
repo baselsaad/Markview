@@ -2,7 +2,11 @@
 
 A clean, compact style for VS Code's built-in Markdown preview.
 
-![Codex Markdown Preview Style](images/preview.png)
+## Preview
+
+![Codex Markdown Preview Style in VS Code](images/preview.png)
+
+_Dark theme shown at 150% preview zoom._
 
 ## Features
 
