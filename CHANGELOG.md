@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.7 - 2026-09-09
+
+- Fixed the Marketplace preview image link.
+
 ## 0.0.6 - 2026-09-08
 
 - Added compact Markdown preview styling.

@@ -2,7 +2,7 @@
   "name": "codex-markdown-preview-style",
   "displayName": "Codex Markdown Preview Style",
   "description": "A clean, compact, theme-aware style for VS Code's built-in Markdown preview.",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "publisher": "BaselSaad",
   "license": "SEE LICENSE IN LICENSE",
   "repository": {
