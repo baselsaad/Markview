@@ -2,6 +2,8 @@
 
 A clean, compact style for VS Code's built-in Markdown preview.
 
+[codex-markdown-preview-style](https://marketplace.visualstudio.com/items?itemName=BaselSaad.codex-markdown-preview-style)
+
 ## Preview
 
 ![Codex Markdown Preview Style in VS Code](images/preview.png)
